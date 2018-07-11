@@ -55,11 +55,7 @@
         [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         
         // fpsLabel
-        if ([UIVisualEffectView class]) {
-            toolbar = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
-        } else {
-            toolbar = [UIToolbar new];
-        }
+        toolbar = [UIToolbar new];
         toolbar.frame = CGRectMake(0, 64, 100, 40);
         fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 80, 20)];
         fpsLabel.font=[UIFont systemFontOfSize:15];
